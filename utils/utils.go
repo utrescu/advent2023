@@ -13,6 +13,13 @@ func StringToInt(str string) (int, error) {
 	return strconv.Atoi(nonFractionalPart[0])
 }
 
+func Abs(number int) int {
+	if number > 0 {
+		return number
+	}
+	return number * -1
+}
+
 func IsInt(s string) bool {
 	for _, c := range s {
 		if !unicode.IsDigit(c) {
